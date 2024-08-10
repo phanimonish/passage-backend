@@ -10,7 +10,7 @@ const path = require("path");
 const app = express();
 
 const corsOptions = {
-  origin: "https://passage-frontend.onrender.com",
+  origin: "http://localhost:3000",
   credentials: true,
   optionSuccessStatus: 200,
   methods: ["GET", "POST", "OPTIONS"],
