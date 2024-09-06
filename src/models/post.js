@@ -8,6 +8,7 @@ const postSchema = new mongoose.Schema({
   date: String,
   comments: Number,
   claps: Number,
+  category: String
 });
 
 const postModel = mongoose.model("post", postSchema);

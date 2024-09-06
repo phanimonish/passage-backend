@@ -21,7 +21,7 @@ const postControllers = {
       const date = new Date().toLocaleDateString();
       const comments = Math.floor(Math.random() * 101);
       const claps = Math.floor(Math.random() * 401);
-      const { username, title, description } = req.body;
+      const { username, title, description, category } = req.body;
       const imageUrl = req.file ? `uploads/${req.file.filename}` : null;
 
       const post = await postModel.create({
@@ -32,6 +32,7 @@ const postControllers = {
         date,
         comments,
         claps,
+        category
       });
 
       res.json(post);
