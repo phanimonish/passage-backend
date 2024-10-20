@@ -1,4 +1,4 @@
-const User = require("../models/user");
+const { User } = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -11,7 +11,7 @@ const authControllers = {
 
       if (await bcrypt.compare(password, user.password)) {
         const token = jwt.sign(
-          { user: user._id, username: user.username },
+          { user: user._id, username: user.username, email: user.email },
           process.env.JWT_SECRET,
           {
             expiresIn: "24h",

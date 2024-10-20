@@ -10,10 +10,11 @@ const path = require("path");
 const app = express();
 
 const corsOptions = {
+  // origin: "http://localhost:3000",
   origin: "https://6799e88c-86d4-4b95-b06b-e62963a65d76.e1-us-cdp-2.choreoapps.dev",
   credentials: true,
   optionSuccessStatus: 200,
-  methods: ["GET", "POST", "OPTIONS"],
+  methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE", "PATCH"],
 };
 
 app.use(cors(corsOptions));
