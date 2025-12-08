@@ -11,7 +11,7 @@ const app = express();
 
 const corsOptions = {
   // origin: "http://localhost:3000",
-  origin: "https://passage-frontend.onrender.com",
+  origin: "https://passage-yrdw.onrender.com",
   credentials: true,
   optionSuccessStatus: 200,
   methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE", "PATCH"],
